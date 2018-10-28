@@ -1,51 +1,44 @@
-#imports
 
-#if __name__=='__main__':
+from Liga import Liga, LigaMng, FactoriaLigas
 
-#ObtenerEquipos()
-#mientras lstEquipos <> vacia
-#    equipo = sigEquipo()
-#    obtenerJugadores(equipo)
-#    mientras lstJugadores <> vacia
-#    jugador = SigJugador
-#    Jugador = ObtDatosJugador(jugador)
-#    guardarJugador
+#from Equipo import Equipo, EquipoMng
 
-#from htmlJugador import HTMLJugador, HTMLFicha
-from Jugador import JugadorMng
-from bs4 import BeautifulSoup
-import requests
-import htmlF1M
-import htmlMadrid
-from Jugador import Jugador, JugadorMng
+factoriaLigas = FactoriaLigas()
+lista_ligas = factoriaLigas.obtener_ligas()
 
+liga_Mng = LigaMng()
+liga_Mng.obtener_lista_datos(lista_ligas)
 
-#page = requests.get("https://www.laliga.es/laliga-santander/real-madrid")
-page = requests.get("https://www.laliga.es/laliga-123/malaga")
-htmlContent = page.content
-#htmlContent = htmlMadrid.HTMLMADRID
+#equipo = Equipo("https://www.laliga.es/laliga-santander/real-madrid")
+#equipo_mng = EquipoMng()
+#equipo_mng.obtener_datos(equipo)
+#equipo_mng.guardar(equipo)
 
-soup = BeautifulSoup(htmlContent,'lxml')
-enlaces = soup.select("a.box-jugador")
+##page = requests.get("https://www.laliga.es/laliga-santander/real-madrid")
+#page = requests.get("https://www.laliga.es/laliga-123/malaga")
+#htmlContent = page.content
+##htmlContent = htmlMadrid.HTMLMADRID
 
-#print (soup.prettify())
+#soup = BeautifulSoup(htmlContent,'lxml')
+#enlaces = soup.select("a.box-jugador")
 
-lstJugadores = []
+##print (soup.prettify())
 
-for jugador in enlaces:
-    jugador = Jugador(jugador.get('href'))
-    lstJugadores.append(jugador)
+#lstJugadores = []
+
+#for jugador in enlaces:
+#    jugador = Jugador(jugador.get('href'))
+#    lstJugadores.append(jugador)
 
    
-#jugador = Jugador('https://www.laliga.es/jugador/sergio-ramos')
+##jugador = Jugador('https://www.laliga.es/jugador/sergio-ramos')
 
+#jugadorMng = JugadorMng("")
 
-
-jugadorMng = JugadorMng("")
-
-jugadorMng.obtener_lista_datos(lstJugadores)
-jugadorMng.guardar_lista(lstJugadores)
-#print(jugador.Nombre)
-#print(jugador.Nombre)
+#jugadorMng.obtener_lista_datos(lstJugadores)
+#jugadorMng.guardar_lista(lstJugadores)
+##print(jugador.Nombre)
+##print(jugador.Nombre)
 
 print('Fin')
+

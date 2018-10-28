@@ -1,27 +1,24 @@
-;;;Munir Mohand Mohamedi ;1;Portero;10/05/1989;0;0;Melilla;Nacionalidad: Española
-;;;Andrés Tomás Prieto Albert;13;Portero;17/10/1993;0;0;Alicante;Nacionalidad: Española
-;;;Paweł Kieszek;25;Portero;16/04/1982;0;0;Varsovia (Polonia);Nacionalidad: Polaca
-;;;Diego González Polanco;3;Defensa;28/01/1995;0;0;;Nacionalidad: Española
-;;;Luis Hernández Rodríguez;4;Defensa;14/04/1989;0;0;Madrid (Madrid);Nacionalidad: Española
-;;;Pau Francisco Torres;5;Defensa;16/01/1997;0;0;Vila-Real (Castellón);Nacionalidad: Española
-;;;Juan Carlos Pérez López;7;Defensa;30/03/1990;0;0;Madrid (Madrid);Nacionalidad: Española
-;;;Miguel Ángel Garrido Cifuentes;12;Defensa;05/10/1990;0;0;Alicante (Alicante);Nacionalidad: Española
-;;;Federico Ricca Rostagnol;15;Defensa;01/12/1994;0;0;Tarariras (Uruguay);Nacionalidad: Uruguaya
-;;;David Rodríguez Lombán;18;Defensa;05/06/1987;0;0;Avilés (Asturias);Nacionalidad: Española
-;;;Miguel Torres ;23;Defensa;28/01/1986;0;0;Madrid;Nacionalidad: Española
-;;;Abdelkabir Abqar;32;Defensa;10/03/1999;0;0;Settat (Marruecos);Nacionalidad: Marroquí
-;;;Medhi Gregory Guiseppe Lacen;6;Centrocampista;15/05/1984;0;0;París (Francia);Nacionalidad: Argelina
-;;;Adrián González Morales;8;Centrocampista;25/05/1988;0;0;Madrid (Madrid);Nacionalidad: Española
-;;;Juan Pablo Añor Acosta;10;Centrocampista;24/01/1994;0;0;Caracas (Venezuela);Nacionalidad: Española/Venezolana
-;;;Badr Boulhroude;14;Centrocampista;21/04/1993;0;0;Rabat, Marruecos;Nacionalidad: Marroquí
-;;;Sead Hakšabanović;20;Centrocampista;04/05/1999;0;0;Hylyebruk (Suecia);Nacionalidad: Montenegrina
-;;;Alfred Jonh Momar N'Diaye;21;Centrocampista;06/03/1990;0;0;Senegal;Nacionalidad: Senegalesa
-;;;Daniel Pacheco Lobato;22;Centrocampista;05/01/1991;0;0;Pizarra (Málaga);Nacionalidad: Española
-;;;Alejandro Mula;28;Centrocampista;23/07/1996;0;0;Barcelona;Nacionalidad: Española
-;;;Hicham Boussefiane;31;Centrocampista;09/01/1998;0;0;Rabat (Marruecos);Nacionalidad: Marroquí
-;;;Gustavo Blanco Leschuk;9;Delantero;05/11/1991;0;0;Mendoza (Argentina);Nacionalidad: Argentina
-;;;Renato Joao Saleiro Santos;11;Delantero;05/10/1991;0;0;Pardilhó, Portugal;Nacionalidad: Portuguesa
-;;;Javier Ontiveros Parra;17;Delantero;09/09/1997;0;0;Marbella (Málaga);Nacionalidad: Española
-;;;Héctor Hernández Marrero;19;Delantero;14/09/1995;0;0;Las Palmas de Gran Canaria (Islas Canarias);Nacionalidad: Española
-;;;Mamadou Koné;24;Delantero;25/12/1991;0;0;Bingerville (Costa de Marfil);Nacionalidad: Costamarfileña
-;;;Jack Harper;30;Delantero;28/02/1996;0;0;Fuengirola (Málaga);Nacionalidad: Española
+Género;Categoría;Equipo;Nombre;Dorsal;Posición;Fecha;Altura;Peso;LugarNacimiento;Nacionalidad
+Masculina;Primera;Fútbol Club Barcelona;Marc-André Ter Stegen;1;Portero;30/04/1992;1,87 m;85 kg;Mönchengladbach (Alemania);b'Alemana'
+Masculina;Primera;Fútbol Club Barcelona;Jasper Cillessen;13;Portero;22/04/1989;1,85 m;83 kg;Groesbeek (Holanda);b'Holandesa'
+Masculina;Primera;Fútbol Club Barcelona;Nelson Cabral Semedo;2;Defensa;16/11/1993;1,77 m;0;Lisboa (Portugal);b'Portuguesa'
+Masculina;Primera;Fútbol Club Barcelona;Gerard Piqué Bernabéu;3;Defensa;02/02/1987;1,94 m;85 kg;Barcelona (Barcelona);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Clement Nicolas Laurent Lenglet;15;Defensa;17/06/1995;186 cm;0;Beauvais (Francia);b'Francesa'
+Masculina;Primera;Fútbol Club Barcelona;Jordi Alba Ramos;18;Defensa;21/03/1989;1,70 m;68 kg;L'Hospitalet de Llobregat (Barcelona);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Sergi Roberto Carnicer;20;Defensa;07/02/1992;1,78 m;68 kg;Reus (Tarragona);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Samuel Umtiti;23;Defensa;14/11/1993;1,82 m;75 kg;Yaundé (Camerún);b'Francesa'
+Masculina;Primera;Fútbol Club Barcelona;Thomas Vermaelen;24;Defensa;14/11/1985;1,85 m;0;Kapellen (Bélgica);b'Belga'
+Masculina;Primera;Fútbol Club Barcelona;Ivan Rakitić;4;Centrocampista;10/03/1988;1,84 m;78 kg;Möhlin (Suiza);b'Croata'
+Masculina;Primera;Fútbol Club Barcelona;Sergio Busquets Burgos;5;Centrocampista;16/07/1988;1,89 m;76 kg;Sabadell (Barcelona);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Denis Suárez Fernández;6;Centrocampista;06/01/1994;1,76 m;69 kg;Salceda de Caselas (Pontevedra);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Philippe Coutinho;7;Centrocampista;12/06/1992;1,73 m;0;Río de Janeiro (Brasil);b'Brasile\xc3\xb1a'
+Masculina;Primera;Fútbol Club Barcelona;Arthur Henrique Ramos de Oliveira Melo;8;Centrocampista;12/08/1996;0;0;Goiana (Brasil);b'Brasile\xc3\xb1a'
+Masculina;Primera;Fútbol Club Barcelona;Rafael Alcántara Do Nascimento;12;Centrocampista;12/02/1993;1,74 m;71 kg;São Paulo (Brasil);b'Brasile\xc3\xb1a'
+Masculina;Primera;Fútbol Club Barcelona;Sergi Samper Montaña;16;Centrocampista;20/01/1995;1,81 m;72 kg;Barcelona (Barcelona);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Arturo Vidal;22;Centrocampista;22/05/1987;1,80 m;0;Santiago de Chile, Chile;b'Chilena'
+Masculina;Primera;Fútbol Club Barcelona;Carlos Aleñá;26;Centrocampista;05/01/1998;1,80 m.;73 KG. ;Mataró (Barcelona);b'Espa\xc3\xb1ola'
+Masculina;Primera;Fútbol Club Barcelona;Luis Alberto Suárez Díaz;9;Delantero;24/01/1987;1,82 m;86 kg. ;Salto (Uruguay);b'Uruguaya'
+Masculina;Primera;Fútbol Club Barcelona;Lionel Andrés Messi;10;Delantero;24/06/1987;1,70 m;72 kg;Rosario (Argentina);b'Argentina'
+Masculina;Primera;Fútbol Club Barcelona;Ousmane Dembélé;11;Delantero;15/05/1997;1,77 m;0;Vernon (Francia);b'Francesa'
+Masculina;Primera;Fútbol Club Barcelona;Malcom Filipe Silva de Oliveira;14;Delantero;26/02/1997;1,71 m;0;São Paulo (Brasil);b'Brasile\xc3\xb1a'
+Masculina;Primera;Fútbol Club Barcelona;Munir El Haddadi Mohamed;19;Delantero;01/09/1995;1,75 m;0;El Escorial (Madrid);b'Espa\xc3\xb1ola'

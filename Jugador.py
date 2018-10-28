@@ -1,11 +1,11 @@
 from htmlJugador import HTMLFicha
 from bs4 import BeautifulSoup
-import csv
 import PetitionWeb
 from PetitionWeb import PeticionWeb
+from EscritorCSV import EscritorCSV
 
 class Jugador(object):
-    """description of class"""
+    """Clase que representa la información de un jugador"""
     Nombre       = ""
     Dorsal       = 0
     Posicion     = ""
@@ -15,10 +15,10 @@ class Jugador(object):
     LugarNacim   = ""
     Nacionalidad = ""
     Url          = ""
-    Deporte      = ""
     Categoria    = ""
     Genero       = ""
-    Equipo       = ""  
+    Equipo       = ""
+    Liga         = ""
     
     def __init__(self, url = ""):
         self.Url = url
@@ -31,6 +31,8 @@ class JugadorMng(object):
     
     def __init__(self, peticion_web : PeticionWeb):
         self._nombre_fichero = "dataset.csv"
+        self._cabera = 'Género','Categoría','Equipo','Nombre','Dorsal','Posición','Fecha','Altura','Peso','LugarNacimiento','Nacionalidad'
+        self._escritor_CSV = EscritorCSV(self._nombre_fichero,self._cabera)
         if peticion_web == "":
             self._peticion_web = PeticionWeb()
         else:
@@ -44,16 +46,7 @@ class JugadorMng(object):
         contenido = self._peticion_web.hacer_peticion(jugador.Url)
         #contenido = HTMLFicha
         soup = BeautifulSoup(contenido,'lxml')
-
-        #jugador.Nombre       = self.soup_find(soup, 'div', {'id': 'nombre'})
-        #jugador.Dorsal       = self.soup_find(soup, 'div', {'id': 'dorsal'})
-        #jugador.Posicion     = self.soup_find(soup, 'div', {'id': 'posicion'})
-        #jugador.Fecha        = self.soup_find(soup, 'div', {'id': 'fecha_nacimiento'})
-        #jugador.Fecha        = jugador.Fecha.replace('Fecha nacimiento: ','').strip()
-        #jugador.LugarNacim   = self.soup_find(soup, 'div', {'id': 'lugar_nacimiento'})
-        #jugador.LugarNacim   = jugador.LugarNacim.replace('Lugar de nacimiento: ','').strip()
-        #jugador.Nacionalidad = self.soup_find(soup, 'div', {'id': 'nacionalidad'})
-
+        
         jugador.Nombre       = self.soup_text(soup.find('div', {'id': 'nombre'}))
         jugador.Dorsal       = self.soup_text(soup.find('div', {'id': 'dorsal'}))
         jugador.Posicion     = self.soup_text(soup.find('div', {'id': 'posicion'}))
@@ -62,33 +55,29 @@ class JugadorMng(object):
         jugador.LugarNacim   = self.soup_text(soup.find('div', {'id': 'lugar_nacimiento'}))
         jugador.LugarNacim   = jugador.LugarNacim.replace('Lugar de nacimiento: ','').strip()
         jugador.Nacionalidad = self.soup_text(soup.find('div', {'id': 'nacionalidad'}))
+        jugador.Nacionalidad = jugador.Nacionalidad.replace('Nacionalidad: ','').strip()
+
+        datos = soup.select("section.datos-sidebar-jugador > div.box-datos > div.box-dato") 
+        #datos                = soup.find_all('div', {'class': 'dato'})        
+#
+        for dato in datos:
+            print (dato)
+            nombre_dato = self.soup_text(dato.find('h2', {'class': 'nombre'}))
+            if nombre_dato == "Altura":
+                jugador.Altura   = self.soup_text(dato.find('div', {'class': 'dato'}))
+            elif nombre_dato == "Peso":
+                jugador.Peso     = self.soup_text(dato.find('div', {'class': 'dato'}))                   
         
-    def guardar_lista(self, lista_Jugadores):
-        dataset = open(self._nombre_fichero, 'w', encoding="utf-8", newline='\n')
-        for jugador in lista_Jugadores:  # no se llama a Guardar para no abrir y cerrar el fichero por cada jugador            
-            dtWriter = csv.writer(dataset, delimiter=';',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            dtWriter.writerow([jugador.Genero, jugador.Categoria, jugador.Equipo, jugador.Nombre, jugador.Dorsal, jugador.Posicion, jugador.Fecha, jugador.Altura, jugador.Peso, jugador.LugarNacim, jugador.Nacionalidad])
-        dataset.close()            
+    def guardar_lista(self, lista_Jugadores):        
+        for jugador in lista_Jugadores:
+            self.guardar(jugador, False)                        
+        self._escritor_CSV.cerrar()
 
-    def guardar(self, jugador: Jugador):
-        dataset = open(self._nombre_fichero, 'w', encoding="utf-8",newline='\n')
-        dtWriter = csv.writer(dataset, delimiter=';',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        dtWriter.writerow([jugador.Genero, jugador.Categoria, jugador.Equipo, jugador.Nombre, jugador.Dorsal, jugador.Posicion, jugador.Fecha, jugador.Altura, jugador.Peso, jugador.LugarNacim, jugador.Nacionalidad])
-        dataset.close()              
-    
-    def soup_find(self, soup, arg1, **attrs):
-        try:
-            print (attrs)
-            resu = soup.find(arg1, attrs)
-            if resu is None: 
-                return ""
-            else: 
-                return resu.text            
-        except :
+    def guardar(self, jugador: Jugador, cerrar = True):
+        self._escritor_CSV.escribir_linea(jugador.Genero, jugador.Categoria, jugador.Equipo, jugador.Nombre, jugador.Dorsal, jugador.Posicion, jugador.Fecha, jugador.Altura, jugador.Peso, jugador.LugarNacim, jugador.Nacionalidad)
+        if cerrar:
+            self._escritor_CSV.cerrar()
         
-            return ""
-
-
     def soup_text(self, valor):
         resu = ""
         try:                
@@ -97,3 +86,14 @@ class JugadorMng(object):
         except :
             resu = ""
         return resu
+
+    #def soup_find(self, soup, arg1, **attrs):
+    #    try:
+    #        print (attrs)
+    #        resu = soup.find(arg1, attrs)
+    #        if resu is None: 
+    #            return ""
+    #        else: 
+    #            return resu.text            
+    #    except:        
+    #        return ""
