@@ -22,14 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Configuracion.py" />
     <Compile Include="Equipo.py" />
     <Compile Include="EscritorCSV.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="htmlF1M.py" />
-    <Compile Include="htmlJugador.py" />
-    <Compile Include="htmlMadrid.py" />
     <Compile Include="Jugador.py" />
     <Compile Include="Liga.py">
       <SubType>Code</SubType>

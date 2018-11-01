@@ -29,13 +29,16 @@ class EquipoMng(object):
         for equipo in lista_Equipos:
             self.obtener_datos(equipo)
 
+    #def obtener_lista_datos(self, lista_Equipos):        
+    #    self.obtener_datos(lista_Equipos[0])
+
     def obtener_datos(self, equipo: Equipo): 
         contenido = self._peticion_web.hacer_peticion(equipo.Url)
         soup = BeautifulSoup(contenido,'lxml')
         equipo.Nombre     = self.soup_text(soup.find('h1', {'class': 'titulo_equipo'}))        
         enlaces_jugadores = soup.select("a.box-jugador")        
          
-        equipo.jugadores = []
+        equipo.Jugadores = []
 
         for enlace in enlaces_jugadores:
             jugador = Jugador(enlace.get('href'))
