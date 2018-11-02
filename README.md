@@ -5,6 +5,8 @@ UOC/Tipología y ciclo de vida de los datos: Práctica 1. Web Scraping
 
 El conjunto de datos resultante de este proyecto práctico recopia, en una misma fuente de datos, la información referente a los jugadores de futbol profesional español de primera y segunda división masculino. Agrupa datos de los jugadores como nombre, edad, fecha de nacimiento, etc, y los relaciona con sus respectivos equipos y liga.
 
+<img src="documentacion/Imagen.jpg">
+
 ## Archivos del código y ejecución
 
 El projecto es realizado en Python:
