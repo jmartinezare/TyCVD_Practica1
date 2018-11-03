@@ -9,7 +9,7 @@ El conjunto de datos resultante de este proyecto práctico recopia, en una misma
 
 ## Archivos del código y ejecución
 
-El proyecto es realizado en Python:
+El proyecto se ha realizado Python:
 
 - **main.py**:        Fichero principal de la aplicación 
 - **Liga.py**:        Obtiene información de cada liga y las urls de los equipos que la componen

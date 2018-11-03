@@ -328,6 +328,8 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/TyCVD_Practica1.pyproj
 /TyCVD_Practica1.sln
 /imagenes
 /dataset - copia.csv
+/Resultado/dataset - copia.csv
