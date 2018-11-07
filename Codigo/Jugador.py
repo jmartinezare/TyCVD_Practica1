@@ -44,12 +44,7 @@ class JugadorMng(object):
 
     def obtener_lista_datos(self, lista_Jugadores):                      
         for jugador in lista_Jugadores:            
-            self.obtener_datos(jugador)
-
-    #def obtener_lista_datos(self, lista_Jugadores):                          
-    #    for jugador in lista_Jugadores:
-    #        if jugador.ShorName == "rakitic":
-    #            self.obtener_datos(jugador)            
+            self.obtener_datos(jugador)         
 
     def obtener_datos(self, jugador: Jugador):                                   
         contenido = self._peticion_web.hacer_peticion(jugador.Url)

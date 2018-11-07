@@ -7,7 +7,7 @@ import pathlib
 
 class PeticionWeb(object):
     """Clase encargada de hacer la peticios de datos a una url y devolver la respuesta """
-    #user-agent = Mediapartners-Google (https://support.google.com/webmasters/answer/1061943?hl=es)
+    #Se usa el user-agent de Google, Mediapartners-Google (https://support.google.com/webmasters/answer/1061943?hl=es)
 
     def __init__(self):
         self._tiempo_ult_peticion = time.time()
@@ -74,6 +74,4 @@ class PeticionWeb(object):
             except urllib.error.HTTPError as e:
                  print("Error al descargar imagen: ", url)            
             except:
-                print("Error al crear la imagen ", ruta ) 
-    
-    
+                print("Error al crear la imagen ", ruta )    

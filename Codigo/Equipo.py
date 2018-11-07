@@ -29,8 +29,6 @@ class EquipoMng(object):
         for equipo in lista_Equipos:
             self.obtener_datos(equipo)
 
-    #def obtener_lista_datos(self, lista_Equipos):        
-    #    self.obtener_datos(lista_Equipos[0])
 
     def obtener_datos(self, equipo: Equipo): 
         contenido = self._peticion_web.hacer_peticion(equipo.Url)
@@ -51,13 +49,6 @@ class EquipoMng(object):
         self._jugador_Mng.obtener_lista_datos(equipo.Jugadores)
         # Aquí se podría cambiar el orden de los jugadores a la hora de guardarlos
         self._jugador_Mng.guardar_lista(equipo.Jugadores)
-
-    #def guardar_lista(self, lista_equipos):
-    #    for equipo in lista_equipos:
-    #        self.guardar(equipo)
-
-    #def guardar(self, equipo: Equipo):
-    #    self._jugador_Mng.guardar_lista(equipo.Jugadores)
 
     def soup_text(self, valor):
         resu = ""

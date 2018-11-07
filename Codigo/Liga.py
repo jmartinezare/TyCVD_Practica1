@@ -40,14 +40,6 @@ class LigaMng(object):
 
         self._equipo_Mng.obtener_lista_datos(liga.Equipos)
 
-    #def guardar_lista(self, lista_ligas):
-    #    for liga in lista_ligas:
-    #        self.guardar(liga)
-
-    #def guardar(self, liga: Liga):
-    #    self._equipo_Mng.guardar_lista(liga.equipos)
-
-
 class FactoriaLigas(object):
     """ Obtiene los objetos de Liga que se van a utilizar en este proceso"""
     def obtener_ligas(self):

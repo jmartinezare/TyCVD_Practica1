@@ -19,11 +19,8 @@ class EscritorCSV(object):
                 if self._fichero_nuevo == False:
                     self._tipo_escritura   = 'a'            
 
-
-
                 self._fichero_abierto = True
                 self._dataset  = open(self._ruta_dataset, self._tipo_escritura, newline='',encoding='utf-8')
-                #self._escritor = csv.writer(self._dataset, delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                 self._escritor = csv.writer(self._dataset, delimiter=';',quoting=csv.QUOTE_MINIMAL)
 
                 if self._fichero_nuevo:
