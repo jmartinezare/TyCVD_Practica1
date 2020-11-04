@@ -35,7 +35,7 @@ Durante la ejecución, se muestran las url que se van consultando y los tiempos 
 
 ## Miembros del equipo
 
-Este proyecto ha sido realizado en grupo, compuesto por: Javier Martínez
+Este proyecto ha sido realizado por: Javier Martínez
 
 ## Bibliografía
 
